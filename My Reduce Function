@@ -1,0 +1,21 @@
+def myreduce(func, iterable, start=None):
+    rs = []
+    it = iter(iterable)
+    if start is None:
+        try:
+            start = next(it)
+        except StopIteration:
+            raise TypeError('reduce() of empty sequence with no initial value')
+    accum_value = start
+    for x in iterable:
+        accum_value = func(x)
+        rs.append(accum_value)
+    
+    return rs
+    
+def fact(n):
+    if n == 0 or n == 1:
+        return 1
+    return fact(n-1) * n
+
+print(myreduce(fact,[1,2,3]))
