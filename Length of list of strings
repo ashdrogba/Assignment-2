@@ -1,0 +1,18 @@
+def findLength(a):
+    number = []
+    for x in a:
+        number.append(int(len(x)))
+    return number
+
+def main():
+    
+    a = []
+    n = int(input("Enter the number of elements in list:"))
+    for x in range(0,n):
+        element = input ("Enter an element"+str(x+1)+":")
+        a.append(element)
+        
+    print(findLength(a))
+    
+if __name__ == "__main__":
+    main()
