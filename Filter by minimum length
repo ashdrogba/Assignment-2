@@ -1,0 +1,20 @@
+def modifiedLength(a,minLength):
+    newList = []
+    for x in a:
+        if len(x)>minLength:
+            newList.append(x)
+    return newList            
+
+def main():
+    
+    a = []
+    n = int(input("Enter the number of elements in list:"))
+    for x in range(0,n):
+        element = input ("Enter an element"+str(x+1)+":")
+        a.append(element)
+    
+    minLength = int(input("Enter the minimum length of a string"))        
+    print(modifiedLength(a,minLength))
+    
+if __name__ == "__main__":
+    main()
