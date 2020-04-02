@@ -1,0 +1,26 @@
+class Triangle:
+    
+    def __init__(self,x,y,z):
+        self.x = x
+        self.y = y
+        self.z = z
+x = 0 
+y = 0
+z = 0
+def enterLength(tri1):
+    tri1.x = int(input("Enter first length"))
+    tri1.y = int(input("Enter second length"))
+    tri1.z = int(input("Enter third length"))
+        
+def findArea(tri1):
+    tri1.sp = (tri1.x+tri1.y+tri1.z)/2
+    tri1.area = (tri1.sp*(tri1.sp-tri1.x)*(tri1.sp-tri1.y)*(tri1.sp-tri1.z))**0.5
+    print(tri1.area)
+        
+def main():
+    tri1 = Triangle(x,y,z)
+    enterLength(tri1)
+    findArea(tri1)
+        
+if __name__ == "__main__":
+    main()
