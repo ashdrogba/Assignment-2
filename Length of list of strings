@@ -4,6 +4,12 @@ def findLength(a):
         number.append(int(len(x)))
     return number
 
+def add_len(strlist):
+    new_list = []
+    for s in strlist:
+        new_list.append((s, len(s)))
+    return new_list
+
 def main():
     
     a = []
@@ -13,6 +19,7 @@ def main():
         a.append(element)
         
     print(findLength(a))
+    print(add_len(a))
     
 if __name__ == "__main__":
     main()
